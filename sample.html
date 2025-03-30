@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Web Page</title>    
+    <link rel="stylesheet" href="ciara.css">
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav1");
+            nav.classList.toggle("active");
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .x {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav1 {
+            display: flex;
+            gap: 15px;
+        }
+        .nav1 a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .nav1 {
+                display: none;
+                flex-direction: column;
+                background-color: #444;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                width: 150px;
+                padding: 10px;
+            }
+            .nav1.active {
+                display: flex;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="x">
+        <div class="div1">
+            <h1>CIARA CASH POINT LTD</h1>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav1">
+            <a href="#">URA Payments</a>
+            <a href="#">MoMo</a>
+            <a href="#">Banking</a>
+            <a href="#">Foreign Exchange</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+    
+    <nav class="nav2">
+        <div class="div2">
+            <p>First</p>
+        </div>
+        <div class="div3">
+            <p>Second</p>
+        </div>
+        <div class="div4">
+            <p>Third</p>
+        </div>
+    </nav>
+</body>
+</html>
