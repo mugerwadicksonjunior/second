@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <style>
+        .menu-container {
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap: 15px; /* Space between items */
+            justify-content: center;
+        }
+
+        .menu-item {
+            flex: 1 1 calc(33.33% - 20px);   /*Three items per row*/
+            max-width: 300px; /* Limit item width */
+            background: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .menu-item img {
+            width: 100%; /* Make images fill the container */
+            height: 200px; /* Ensure equal height */
+            object-fit: cover; /* Crop and fill without distortion */
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-item {
+                flex: 1 1 100%; /* Stack on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="pizza.jpg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Cheesy and delicious pizza with a variety of toppings.</p>
+            <p>$12.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="chicken.jpg" alt="Burger">
+            <h3>Burgers</h3>
+            <p>Juicy burgers made with fresh ingredients.</p>
+            <p>$10.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="all.jpg" alt="Sushi">
+            <h3>Sushi</h3>
+            <p>Fresh sushi rolls made to order.</p>
+            <p>$15.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="lunch-at-the-woody-wine.jpg" alt="Salad">
+            <h3>Salads</h3>
+            <p>Healthy and fresh salads with a variety of dressings.</p>
+            <p>$8.99</p>
+        </div>
+    </div>
+
+</body>
+</html>
